@@ -11,7 +11,7 @@ import { Storage } from '@ionic/storage';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  exibirConfig = true
+  exibirConfig = false
   PATH ='PATH'
   configuracao = ''
   httpOptions = {
@@ -22,13 +22,8 @@ export class HomePage {
 
   listaFuncionarios: Funcionario[] = new Array<Funcionario>();
   constructor(public storage: Storage, private http: HttpClient ) {
-    this.storage.get(this.PATH).then(data => { 
-      if(data){
-        this.configuracao = data
-        this.exibirConfig = false
+        this.configuracao = 'http://sambarecife-env.3fzjmnwhip.us-east-2.elasticbeanstalk.com/funcionario/'
         this.listar()
-      }
-    })
   }
 
   salvarConfig(){

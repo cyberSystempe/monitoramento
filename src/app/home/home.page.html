@@ -7,16 +7,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-list *ngIf="!exibirConfig" >
+  <ion-list  >
     <ion-item *ngFor="let item of listaFuncionarios" >
       <ion-label>Nome: <b>{{item.codigo}}</b>  -  Quantidade: <b>{{item.qtd}}</b></ion-label>
     </ion-item>
   </ion-list>
 
-  <div *ngIf="exibirConfig" class="ion-padding" style="margin-top: 55%">
-      <ion-input  class="input margin" [(ngModel)]="configuracao" placeholder="URL Acesso"></ion-input>
-      <div class="ion-padding">
-          <ion-button expand="block" type="submit" (click)="salvarConfig()" class="ion-no-margin">Salvar</ion-button>
-        </div>
-    </div>
 </ion-content>
