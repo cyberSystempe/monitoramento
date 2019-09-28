@@ -1,16 +1,21 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>
       Monitoramento
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <ion-list  >
+    <div > <img class="img-letra" src="../../assets/logoSamba.png" /> </div>
+
+  <div  *ngFor="let item of listaFuncionarios" style="background-color: rgba(10,23,55,0.5);" padding>
+      <ion-label style="color: white; ">Nome: <b>{{item.codigo}}</b>  -  Quantidade: <b>{{item.qtd}}</b></ion-label>
+  </div>
+  <!-- <ion-list  >
     <ion-item *ngFor="let item of listaFuncionarios" >
       <ion-label>Nome: <b>{{item.codigo}}</b>  -  Quantidade: <b>{{item.qtd}}</b></ion-label>
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 
 </ion-content>
